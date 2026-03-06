@@ -1,0 +1,109 @@
+{
+  "projectType": "saas",
+  "projectName": "VoltChat",
+  "projectDescription": "Anonymous ephemeral real-time chat with no data persistence — messages vanish when you leave.",
+  "theme": "aspen",
+  "primaryColor": "#33cf99",
+  "lightColor": "#1c6c5c",
+  "darkColor": "#0c0c1c",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart", "deployment"]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/rooms-and-messaging",
+              "features/security-and-privacy",
+              "features/moderation-tools",
+              "features/sharing-and-discovery"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/environment-variables",
+              "configuration/room-settings",
+              "configuration/themes-and-customization"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/tech-stack",
+              "architecture/project-structure",
+              "architecture/realtime-communication",
+              "architecture/security"
+            ]
+          },
+          {
+            "group": "Self-Hosting",
+            "pages": [
+              "self-hosting/supabase-setup",
+              "self-hosting/vercel-deployment",
+              "self-hosting/security-best-practices"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Hooks",
+            "pages": [
+              "api/hooks/use-chat-room",
+              "api/hooks/use-lobby",
+              "api/hooks/use-bookmarks"
+            ]
+          },
+          {
+            "group": "Utilities",
+            "pages": [
+              "api/utils/crypto",
+              "api/utils/content-filter",
+              "api/utils/themes",
+              "api/utils/rate-limit"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "api/components/chat-interface",
+              "api/components/message-bubble",
+              "api/components/user-sidebar"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Ephemeral messaging with zero database persistence",
+    "Optional end-to-end AES-GCM 256-bit encryption",
+    "Public and private room support with visibility controls",
+    "Real-time presence tracking and typing indicators",
+    "Vote kick and moderation tools for room creators",
+    "Message reactions, reply threads, and read receipts",
+    "Room themes, tags, TTL, and capacity controls",
+    "Swipe-to-reply mobile gestures",
+    "PWA support with offline fallback",
+    "Security hardened with flood detection and rate limiting"
+  ],
+  "publicApiSurface": [
+    "useChatRoom - Core realtime hook with broadcast, presence, E2EE, reactions, vote kick, TTL, succession, AFK, read receipts",
+    "useLobby - Public room discovery via lobby presence",
+    "useBookmarks - Room bookmark management",
+    "useKeyboardShortcuts - Keyboard shortcut handler",
+    "useSwipeGesture - Touch swipe detection for mobile",
+    "encryptMessage / decryptMessage - AES-GCM E2EE functions",
+    "applyRoomTheme - Theme system with 25+ CSS properties",
+    "filterContent - Opt-in profanity filter with 3 levels",
+    "RateLimiter - In-memory rate limiting for flood protection"
+  ]
+}
